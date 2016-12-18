@@ -1,4 +1,5 @@
-﻿using AspCoreWebApiApp.Models;
+﻿using System.Collections.Generic;
+using AspCoreWebApiApp.Models;
 using Microsoft.AspNetCore.Mvc;
 
 // For more information on enabling Web API for empty projects, visit http://go.microsoft.com/fwlink/?LinkID=397860
@@ -25,11 +26,11 @@ namespace AspCoreWebApiApp.Controllers
             return new ObjectResult(bugOpenedVersionResponse);
         }
 
-        //[HttpGet]
-        //public IEnumerable<string> GetAll()
-        //{
-        //    return new List<string> {"1", "2", "3"};
-        //}
+        [HttpGet]
+        public IEnumerable<string> GetAll()
+        {
+            return new List<string> { "1", "2", "3" };
+        }
 
         //[HttpGet("{id}", Name = "GetBugOpenedVersion")]
         //public IActionResult GetById(string id)
